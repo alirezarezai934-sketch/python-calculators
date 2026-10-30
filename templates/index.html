@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TAMRIN 13</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>Python Calculator for school</h1>
+        <p class="subtitle">A simple math </p>
+
+        <form method="POST">
+
+            <label>Select Operation</label>
+
+            <select name="choice">
+                <option value="1">Addition</option>
+                <option value="2">Absolute Difference</option>
+                <option value="3">Power</option>
+                <option value="4">Division</option>
+                <option value="5">Round a Number</option>
+                <option value="6">max & Min</option>
+                <option value="7">Sum of Three Numbers</option>
+                <option value="8">Convert to Integer</option>
+                <option value="9">Convert to Float</option>
+            </select>
+
+            <label>First Number</label>
+            <input type="number" step="any" name="a" placeholder="Enter first number">
+
+            <label>Second Number</label>
+            <input type="number" step="any" name="b" placeholder="Enter second number">
+
+            <label>third number (For Sum)</label>
+            <input type="number" step="any" name="c" placeholder="Enter third number">
+
+            <label>decimal Places (For Round)</label>
+            <input type="number" name="digits" placeholder="Example: 2">
+
+            <button type="submit">Calculate</button>
+
+        </form>
+
+     
+            <div class="result">
+                <h3>Result</h3>
+                <p>{{ result }}</p>
+            </div>
+
+    </div>
+
+</body>
+</html>
